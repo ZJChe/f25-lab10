@@ -16,8 +16,6 @@ class QuizCore {
 
   /**
    * Constructor
-   * @param filePath - The file path to a JSON file containing quiz data.
-   * @param callback - A callback function called when the quiz data is loaded.
    */
   constructor() {
     this.questions = quizData;
