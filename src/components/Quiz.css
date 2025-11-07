@@ -1,14 +1,26 @@
-/* Task 2: 
-TODO: Enhance User Experience by adding visual highlights to selected answers.
-Hint: You can use the className attribute for highlighting. */
+/* Visual style for a selected answer */
 .selected {
-    cursor: pointer; /* Change cursor on hover for interactivity */
-  }
-  
-  /* Additional styling for better user experience */
-  .selected:hover {
-    cursor: pointer;
-  }
+  cursor: pointer; /* maintain pointer */
+  background-color: #e6f7ff; /* light blue background to indicate selection */
+  border-color: #3498db; /* stronger border color */
+  box-shadow: 0 4px 10px rgba(52,152,219,0.15);
+  transform: translateY(-1px);
+  font-weight: 600;
+}
+
+/* Add a small checkmark before the selected option for clarity */
+.selected::before {
+  content: '✓';
+  display: inline-block;
+  color: #1e8449;
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+/* Hover state for selected item keeps pointer */
+.selected:hover {
+  cursor: pointer;
+}
   
   
   /* Container styles */
@@ -47,6 +59,7 @@ Hint: You can use the className attribute for highlighting. */
     margin: 4px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: background-color 0.15s ease, transform 0.12s ease, box-shadow 0.12s ease;
   }
   
   /* Submit button styles */
